@@ -8,6 +8,6 @@ public class KafkaListenerMessages {
 
     @KafkaListener(topics = "topicName", groupId = "app.1")
     public void listenGroupFoo(String message) {
-        System.out.println("Received Message in group foo: " + message);
+        System.out.println("ПРОЧИТАЛ СООБЩЕНИЕ " + message);
     }
 }

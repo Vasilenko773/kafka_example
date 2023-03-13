@@ -15,10 +15,7 @@ public class GeneralApplication {
         ConfigurableApplicationContext context = SpringApplication.run(GeneralApplication.class, args);
         KafkaSendMessages messanger = context.getBean(KafkaSendMessages.class);
         KafkaListenerMessages listener = context.getBean(KafkaListenerMessages.class);
-        messanger.sendMessage("topicNam", "helloWorld");
-//        listener.listenGroupFoo("");
-
-
+        messanger.sendMessage("topicName", "helloWorld");
+        listener.listenGroupFoo("");
     }
-
 }
